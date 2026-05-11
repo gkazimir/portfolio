@@ -1,0 +1,100 @@
+@use '../../styles/colors.scss' as *;
+
+.home {
+  padding: 9.25rem 0 3.5rem;
+
+  .home-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    animation: home-in 0.6s ease both;
+  }
+
+  .home-name {
+    font-size: clamp(44px, 5.5dvw, 68px);
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    color: $text-primary;
+    line-height: 1.05;
+    margin-bottom: 1rem;
+  }
+
+  .home-role {
+    font-size: 15px;
+    color: $accent;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    margin-bottom: 2.25rem;
+  }
+
+  .home-description {
+    font-size: 19px;
+    color: $text-secondary;
+    line-height: 1.65;
+    max-width: 500px;
+    margin-bottom: 1rem;
+    font-weight: 400;
+  }
+
+  .home-detail {
+    font-size: 15px;
+    color: $text-secondary;
+    opacity: 0.72;
+    max-width: 460px;
+    margin-bottom: 3.5rem;
+    line-height: 1.8;
+  }
+
+  .home-links {
+    display: flex;
+    gap: 2.25rem;
+    align-items: center;
+  }
+
+  .home-link {
+    font-size: 15px;
+    font-weight: 500;
+    color: $text-primary;
+    padding-bottom: 2px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+    transition:
+      color 0.2s ease,
+      border-color 0.2s ease;
+
+    &:hover {
+      color: $accent;
+      border-bottom-color: $accent;
+    }
+
+    &.home-link-muted {
+      color: $text-secondary;
+      border-bottom-color: transparent;
+
+      &:hover {
+        color: $text-primary;
+        border-bottom-color: rgba(255, 255, 255, 0.16);
+      }
+    }
+  }
+}
+
+@keyframes home-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 640px) {
+  .home {
+    padding: 6.25rem 0 5.5rem;
+
+    .home-description {
+      font-size: 17px;
+    }
+  }
+}

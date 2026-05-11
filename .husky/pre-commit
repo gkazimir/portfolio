@@ -1,0 +1,8 @@
+echo '🔍 Running lint-staged (lint + format)...'
+
+if ! npx lint-staged; then
+  echo '❌ Lint failed. Commit aborted. Fix the errors above and try again.'
+  exit 1
+fi
+
+echo '✅ Lint passed. Proceeding with commit.'

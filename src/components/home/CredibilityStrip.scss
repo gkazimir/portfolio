@@ -1,0 +1,51 @@
+@use '../../styles/colors.scss' as *;
+
+.cred-strip {
+  background-color: $bg;
+  padding: 0 2rem 5rem;
+
+  .cred-strip-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    border-top: 1px solid $border;
+    padding-top: 1.75rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .cred-strip-item {
+    font-size: 13px;
+    font-weight: 400;
+    color: $text-secondary;
+    padding: 0 1.5rem 0 0;
+
+    & + .cred-strip-item {
+      padding: 0 1.5rem;
+      border-left: 1px solid $border;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .cred-strip {
+    padding: 0 1.5rem 4rem;
+
+    .cred-strip-inner {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.75rem;
+      padding-top: 1.5rem;
+    }
+
+    .cred-strip-item,
+    .cred-strip-item + .cred-strip-item {
+      padding: 0;
+      border-left: none;
+    }
+  }
+}

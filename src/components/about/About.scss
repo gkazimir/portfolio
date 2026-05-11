@@ -1,0 +1,86 @@
+@use '../../styles/colors.scss' as *;
+
+.about {
+  max-width: 700px;
+
+  .about-title {
+    font-size: 32px;
+    font-weight: 600;
+    color: $text-primary;
+    margin-bottom: 2rem;
+  }
+
+  .about-body {
+    display: flex;
+    flex-direction: column;
+    gap: 1.125rem;
+    margin-bottom: 3rem;
+
+    p {
+      font-size: 17px;
+      color: $text-secondary;
+      line-height: 1.8;
+    }
+
+    strong {
+      color: $text-primary;
+      font-weight: 500;
+    }
+  }
+
+  .about-personal {
+    font-size: 14px;
+    font-style: italic;
+    color: $text-secondary;
+    opacity: 0.7;
+    line-height: 1.7;
+    margin-top: 0.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .about-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    border-left: 1px solid $border;
+    padding-left: 1.5rem;
+  }
+
+  .about-entry {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+
+  .about-year {
+    font-size: 13px;
+    color: $accent;
+    font-weight: 500;
+    white-space: nowrap;
+    min-width: 8.5rem;
+    padding-top: 0.125rem;
+  }
+
+  .about-entry-title {
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+    color: $text-primary;
+    margin-bottom: 0.2rem;
+  }
+
+  .about-entry-sub {
+    font-size: 14px;
+    color: $text-secondary;
+    display: block;
+  }
+}
+
+@media (max-width: 640px) {
+  .about {
+    .about-entry {
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+  }
+}

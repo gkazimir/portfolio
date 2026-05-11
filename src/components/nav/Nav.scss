@@ -1,0 +1,180 @@
+@use '../../styles/colors.scss' as *;
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+
+  &.nav-scrolled {
+    background-color: rgba(15, 17, 23, 0.4);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 1px 0 $border;
+  }
+
+  .nav-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-logo {
+    font-size: 18px;
+    font-weight: 600;
+    color: $text-primary;
+    letter-spacing: 0.02em;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: $accent;
+    }
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2.25rem;
+    align-items: center;
+  }
+
+  .nav-link {
+    font-size: 15px;
+    font-weight: 500;
+    color: $text-secondary;
+    position: relative;
+    transition: color 0.2s ease;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -0.25rem;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: $accent;
+      border-radius: 1px;
+      transform: scaleX(0);
+      transform-origin: left center;
+      transition: transform 0.25s ease;
+    }
+
+    &:hover {
+      color: $text-primary;
+    }
+
+    &.active {
+      color: $text-primary;
+
+      &::after {
+        transform: scaleX(1);
+      }
+    }
+  }
+
+  // Hamburger button (hidden by default)
+  .nav-hamburger {
+    display: none;
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-ham {
+    display: block;
+    width: 1.375rem;
+    height: 2px;
+    background-color: $text-primary;
+    border-radius: 1px;
+    position: relative;
+    transition:
+      background-color 0.25s ease,
+      transform 0.25s ease;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: $text-primary;
+      border-radius: 1px;
+      transition:
+        top 0.25s ease,
+        transform 0.25s ease;
+    }
+
+    &::before {
+      top: -0.4375rem;
+    }
+
+    &::after {
+      top: 0.4375rem;
+    }
+
+    &.open {
+      background-color: transparent;
+
+      &::before {
+        top: 0;
+        transform: rotate(45deg);
+      }
+
+      &::after {
+        top: 0;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .nav {
+    .nav-hamburger {
+      display: flex;
+    }
+
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 4rem;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0;
+      background-color: rgba(15, 17, 23, 0.95);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid $border;
+      padding: 0.5rem 0;
+
+      &.open {
+        display: flex;
+      }
+    }
+
+    .nav-link {
+      width: 100%;
+      padding: 0.875rem 2rem;
+      font-size: 16px;
+
+      &::after {
+        display: none;
+      }
+
+      &.active {
+        color: $accent;
+      }
+    }
+  }
+}

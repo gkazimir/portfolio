@@ -1,0 +1,46 @@
+@use '../../styles/colors.scss' as *;
+
+.contact {
+  max-width: 580px;
+
+  .contact-title {
+    font-size: 32px;
+    font-weight: 600;
+    color: $text-primary;
+    margin-bottom: 2.25rem;
+  }
+
+  .contact-text {
+    font-size: 17px;
+    color: $text-secondary;
+    line-height: 1.8;
+    margin-bottom: 2.25rem;
+  }
+
+  .contact-cta {
+    margin-bottom: 2rem;
+  }
+
+  .contact-social {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .contact-social-link {
+    font-size: 15px;
+    font-weight: 500;
+    color: $text-secondary;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: $accent;
+    }
+  }
+
+  .contact-divider {
+    color: $text-secondary;
+    opacity: 0.5;
+    font-size: 16px;
+  }
+}

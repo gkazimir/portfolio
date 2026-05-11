@@ -1,0 +1,57 @@
+@use '../../styles/colors.scss' as *;
+
+.skill-card {
+  background-color: $surface;
+  border: 1px solid $border;
+  border-radius: 5px;
+  padding: 1.125rem 1.375rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  transition: border-color 0.2s ease;
+
+  &:hover {
+    border-color: rgba(255, 255, 255, 0.12);
+  }
+
+  .skill-card-body {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .skill-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin-bottom: 0.625rem;
+  }
+
+  .skill-card-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: $text-primary;
+  }
+
+  .skill-card-level {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    flex-shrink: 0;
+  }
+
+  .skill-card-track {
+    width: 100%;
+    height: 3px;
+    background-color: rgba(255, 255, 255, 0.06);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  .skill-card-fill {
+    height: 100%;
+    border-radius: 2px;
+    transition: width 1s ease-out;
+  }
+}

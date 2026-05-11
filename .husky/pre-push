@@ -1,0 +1,8 @@
+echo '🏗️  Running build check before push...'
+
+if ! npm run build; then
+  echo '❌ Build failed. Push aborted. Fix the errors above and try again.'
+  exit 1
+fi
+
+echo '✅ Build passed. Proceeding with push.'
