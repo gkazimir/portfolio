@@ -30,7 +30,7 @@ const TimelineItem = ({
       <div className="timeline-item-content">
         <div className="timeline-item-header">
           <div>
-            <h3 className="timeline-item-role">{role}</h3>
+            <h4 className="timeline-item-role">{role}</h4>
             <span className="timeline-item-company">{company}</span>
           </div>
           <span className="timeline-item-period">{period}</span>

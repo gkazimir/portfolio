@@ -55,3 +55,9 @@
     transition: width 1s ease-out;
   }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .skill-card-fill {
+    transition: none;
+  }
+}

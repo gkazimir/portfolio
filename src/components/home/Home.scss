@@ -39,7 +39,6 @@
   .home-detail {
     font-size: 15px;
     color: $text-secondary;
-    opacity: 0.72;
     max-width: 460px;
     margin-bottom: 3.5rem;
     line-height: 1.8;
@@ -96,5 +95,11 @@
     .home-description {
       font-size: 17px;
     }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home .home-inner {
+    animation: none;
   }
 }

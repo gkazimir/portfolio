@@ -60,6 +60,7 @@ const Nav = () => {
         <a
           href="#home"
           className="nav-logo"
+          aria-label="Gabriel Kažimír — Home"
           onClick={(event) => {
             event.preventDefault();
             scrollTo('home');
@@ -69,6 +70,7 @@ const Nav = () => {
         </a>
 
         <nav
+          id="nav-menu"
           className={`nav-links${menuOpen ? ' open' : ''}`}
           aria-label="Main navigation"
         >
@@ -92,6 +94,7 @@ const Nav = () => {
           onClick={() => setMenuOpen((open) => !open)}
           aria-label={menuOpen ? 'Close menu' : 'Open menu'}
           aria-expanded={menuOpen}
+          aria-controls="nav-menu"
         >
           <span className={`nav-ham${menuOpen ? ' open' : ''}`} />
         </button>

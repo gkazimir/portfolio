@@ -30,6 +30,7 @@ const Contact = () => {
             className="contact-social-link"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="GitHub (opens in new tab)"
           >
             GitHub
           </a>
@@ -41,6 +42,7 @@ const Contact = () => {
             className="contact-social-link"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="LinkedIn (opens in new tab)"
           >
             LinkedIn
           </a>

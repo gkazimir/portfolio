@@ -21,7 +21,7 @@ body {
     system-ui,
     -apple-system,
     sans-serif;
-  font-size: 16px;
+  font-size: 100%;
   font-weight: 400;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -45,4 +45,30 @@ img {
 
 #root {
   width: 100%;
+}
+
+.skip-link {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: $accent;
+  color: #0f1117;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: 4px;
+  z-index: 200;
+  transform: translateY(-300%);
+  transition: transform 0.2s ease;
+
+  &:focus-visible {
+    transform: translateY(0);
+    outline: none;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid $accent;
+  outline-offset: 3px;
+  border-radius: 2px;
 }

@@ -7,7 +7,7 @@ const levelColorMap: Record<SkillLevel, string> = {
   Advanced: '#22c55e',
   Intermediate: '#38bdf8',
   Learning: '#a78bfa',
-  Familiar: '#6b7280',
+  Familiar: '#8c939f',
 };
 
 interface SkillCardProps {
@@ -57,7 +57,14 @@ const SkillCard = ({ name, level, progress }: SkillCardProps) => {
             {level}
           </span>
         </div>
-        <div className="skill-card-track">
+        <div
+          className="skill-card-track"
+          role="progressbar"
+          aria-valuenow={progress}
+          aria-valuemin={0}
+          aria-valuemax={100}
+          aria-label={`${name} proficiency: ${level}`}
+        >
           <div
             className="skill-card-fill"
             style={{

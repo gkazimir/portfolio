@@ -36,7 +36,7 @@ const Home = () => {
               scrollTo('experience');
             }}
           >
-            See my experience ↓
+            See my experience <span aria-hidden="true">↓</span>
           </a>
           <a
             href="#contact"

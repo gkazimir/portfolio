@@ -31,3 +31,11 @@
     padding: 4.5rem 1.5rem;
   }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .section {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
