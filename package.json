@@ -13,13 +13,20 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
+    "@vercel/speed-insights": "^2.0.0",
     "prettier": "^3.8.3",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },
   "lint-staged": {
-    "src/**/*.{ts,tsx}": ["eslint --fix", "prettier --write"],
-    "src/**/*.{scss,css}": ["prettier --write"]
+    "src/**/*.{ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "src/**/*.{scss,css}": [
+      "prettier --write"
+    ]
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",

@@ -7,6 +7,9 @@ import Experience from './components/experience/Experience';
 import Contact from './components/contact/Contact';
 import Footer from './components/footer/Footer';
 
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
+
 /**
  * It renders the root application layout with the navigation and all page sections.
  * @returns
@@ -27,6 +30,9 @@ const App = () => {
         <Contact />
       </main>
       <Footer />
+
+      <Analytics />
+      <SpeedInsights />
     </>
   );
 };
