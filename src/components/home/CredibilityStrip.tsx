@@ -1,6 +1,6 @@
 import './CredibilityStrip.scss';
 
-const items = [
+const items: string[] = [
   '4 years in frontend',
   'Angular-first development',
   'Enterprise internal products',

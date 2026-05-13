@@ -1,7 +1,12 @@
 import { useEffect, useState } from 'react';
 import './Nav.scss';
 
-const links = [
+type NavLink = {
+  label: string;
+  id: string;
+};
+
+const links: NavLink[] = [
   { label: 'Home', id: 'home' },
   { label: 'About', id: 'about' },
   { label: 'Skills', id: 'skills' },

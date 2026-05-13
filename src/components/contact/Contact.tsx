@@ -2,10 +2,16 @@ import Button from '../ui/Button';
 import SectionWrapper from '../ui/SectionWrapper';
 import './Contact.scss';
 
-const contacts = {
+type ContactInfo = {
+  email: string;
+  github: string;
+  linkedin: string;
+};
+
+const contacts: ContactInfo = {
   email: 'gabrielkazimir1@gmail.com',
   github: 'https://github.com/gkazimir',
-  linkedin: 'https://www.linkedin.com/in/gabriel-ka%C5%BEim%C3%ADr-336090224/',
+  linkedin: 'https://www.linkedin.com/in/gabriel-kažimír-336090224/',
 };
 
 /**

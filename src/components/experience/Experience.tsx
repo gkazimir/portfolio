@@ -3,7 +3,22 @@ import TimelineItem from '../ui/TimelineItem';
 import SectionWrapper from '../ui/SectionWrapper';
 import './Experience.scss';
 
-const workAreas = [
+type WorkArea = {
+  category: string;
+  title: string;
+  description: string;
+  tech: string[];
+};
+
+type Employment = {
+  company: string;
+  role: string;
+  period: string;
+  tech: string[];
+  bullets: string[];
+};
+
+const workAreas: WorkArea[] = [
   {
     category: 'AI Interface · Angular',
     title: 'Internal AI Assistant — Chat Interface & Data Source Management',
@@ -44,7 +59,7 @@ const workAreas = [
   },
 ];
 
-const employment = [
+const employment: Employment[] = [
   {
     company: 'Deutsche Telekom IT Solutions',
     role: 'Application Developer — Front End',
@@ -89,9 +104,10 @@ const Experience = () => {
       <div className="experience">
         <h2 className="experience-title">Product Experience</h2>
         <p className="experience-sub">
-          Most of my work lives inside internal enterprise systems — not public
-          portfolio projects. What follows describes the engineering problems
-          I’ve owned and the systems I’ve built.
+          Most of my work lives inside internal enterprise systems rather than
+          public portfolio projects. The work below reflects the frontend
+          applications, features, and user flows I was primarily responsible for
+          designing, implementing, and maintaining.
         </p>
 
         <div className="experience-work">
